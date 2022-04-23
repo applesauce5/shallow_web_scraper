@@ -30,7 +30,7 @@ def scrape_data(url, destination):
 				if match_fl:
 					filename_loc = match_fl[0]
 					print("=====", destination, str(filename_loc), c)
-					local_filename, headers = urllib.request.urlretrieve(c, filename = destination+str(filename_loc))
+					local_filename, headers = urllib.request.urlretrieve(c, filename = destination+"/" +str(filename_loc))
 					print(local_filename)
 
 if __name__ == "__main__":
